@@ -1,0 +1,41 @@
+{
+  "group": "dimensions",
+  "w": 1024,
+  "h": 683,
+  "n_passed": 3,
+  "n_dims": 4,
+  "dims": [
+    {
+      "dim": "内容理解",
+      "ask": "说出图里有什么",
+      "passed": true,
+      "detail": "- Red circle (top-left)\n- Blue circle (top-right)\n- Red circle (bottom-left)\n- Blue circle (bottom-right)",
+      "elapsed": 22.8
+    },
+    {
+      "dim": "空间关系",
+      "ask": "左右关系判断",
+      "passed": false,
+      "detail": "left",
+      "elapsed": 21.1
+    },
+    {
+      "dim": "颜色计数",
+      "ask": "几种颜色（答案 2）",
+      "passed": true,
+      "detail": "2",
+      "elapsed": 21.6
+    },
+    {
+      "dim": "圆点计数",
+      "ask": "几个圆点（答案 4）",
+      "passed": true,
+      "detail": "4",
+      "elapsed": 22.2
+    }
+  ],
+  "dissociation": true,
+  "note": "维度 2/3/4 不要求输出坐标，排除格式干扰",
+  "run_id": "dims_20261005_153659",
+  "saved_at": "2026-10-05 15:36:59"
+}

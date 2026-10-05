@@ -1,0 +1,410 @@
+{
+  "group": "density",
+  "w": 1024,
+  "h": 683,
+  "hit_radius": 40,
+  "n_targets": 12,
+  "unique_x": 9,
+  "unique_y": 7,
+  "n_valid": 12,
+  "strict_hit": 1,
+  "loose_hit": 1,
+  "format_loss": 0,
+  "verdict": [
+    "✓ 网格猜测假说不成立：X 有 9/12 个不同值，输出是分散的",
+    "✗ 宽松口径命中率仅 8%，groundding 能力确实不可用"
+  ],
+  "results": [
+    {
+      "label": "dense",
+      "results": [
+        {
+          "raw": "113,89",
+          "raw_len": 6,
+          "strict": [
+            113,
+            89
+          ],
+          "loose": [
+            113,
+            89
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.4,
+          "d_loose": 1.4,
+          "d_center": 473.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P1",
+          "elapsed": 7.8,
+          "truth": [
+            112,
+            88
+          ],
+          "rank_x": 1,
+          "rank_y": 3
+        },
+        {
+          "raw": "432,403",
+          "raw_len": 7,
+          "strict": [
+            432,
+            403
+          ],
+          "loose": [
+            432,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 329.5,
+          "d_loose": 329.5,
+          "d_center": 367.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P2",
+          "elapsed": 21.1,
+          "truth": [
+            174,
+            198
+          ],
+          "rank_x": 3,
+          "rank_y": 5
+        },
+        {
+          "raw": "173,642",
+          "raw_len": 7,
+          "strict": [
+            173,
+            642
+          ],
+          "loose": [
+            173,
+            642
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 323.5,
+          "d_loose": 323.5,
+          "d_center": 379.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P3",
+          "elapsed": 21.4,
+          "truth": [
+            133,
+            321
+          ],
+          "rank_x": 2,
+          "rank_y": 8
+        },
+        {
+          "raw": "432,403",
+          "raw_len": 7,
+          "strict": [
+            432,
+            403
+          ],
+          "loose": [
+            432,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 242.6,
+          "d_loose": 242.6,
+          "d_center": 336.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P4",
+          "elapsed": 21.3,
+          "truth": [
+            194,
+            450
+          ],
+          "rank_x": 4,
+          "rank_y": 10
+        },
+        {
+          "raw": "512,342",
+          "raw_len": 7,
+          "strict": [
+            512,
+            342
+          ],
+          "loose": [
+            512,
+            342
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 356.2,
+          "d_loose": 356.2,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P5",
+          "elapsed": 21.4,
+          "truth": [
+            235,
+            566
+          ],
+          "rank_x": 5,
+          "rank_y": 12
+        },
+        {
+          "raw": "673,89",
+          "raw_len": 6,
+          "strict": [
+            673,
+            89
+          ],
+          "loose": [
+            673,
+            89
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 326.9,
+          "d_loose": 326.9,
+          "d_center": 330.6,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P6",
+          "elapsed": 21.2,
+          "truth": [
+            348,
+            54
+          ],
+          "rank_x": 6,
+          "rank_y": 1
+        },
+        {
+          "raw": "732,113",
+          "raw_len": 7,
+          "strict": [
+            732,
+            113
+          ],
+          "loose": [
+            732,
+            113
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 355.9,
+          "d_loose": 355.9,
+          "d_center": 233.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P7",
+          "elapsed": 21.5,
+          "truth": [
+            378,
+            150
+          ],
+          "rank_x": 7,
+          "rank_y": 4
+        },
+        {
+          "raw": "893,342",
+          "raw_len": 7,
+          "strict": [
+            893,
+            342
+          ],
+          "loose": [
+            893,
+            342
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 457.2,
+          "d_loose": 457.2,
+          "d_center": 94.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P8",
+          "elapsed": 21.5,
+          "truth": [
+            440,
+            280
+          ],
+          "rank_x": 9,
+          "rank_y": 7
+        },
+        {
+          "raw": "952,403",
+          "raw_len": 7,
+          "strict": [
+            952,
+            403
+          ],
+          "loose": [
+            952,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 471.0,
+          "d_loose": 471.0,
+          "d_center": 68.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P9",
+          "elapsed": 20.4,
+          "truth": [
+            481,
+            402
+          ],
+          "rank_x": 10,
+          "rank_y": 9
+        },
+        {
+          "raw": "832,524",
+          "raw_len": 7,
+          "strict": [
+            832,
+            524
+          ],
+          "loose": [
+            832,
+            524
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 413.0,
+          "d_loose": 413.0,
+          "d_center": 206.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P10",
+          "elapsed": 21.2,
+          "truth": [
+            419,
+            525
+          ],
+          "rank_x": 8,
+          "rank_y": 11
+        },
+        {
+          "raw": "952,89",
+          "raw_len": 6,
+          "strict": [
+            952,
+            89
+          ],
+          "loose": [
+            952,
+            89
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 256.4,
+          "d_loose": 256.4,
+          "d_center": 323.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P11",
+          "elapsed": 15.7,
+          "truth": [
+            696,
+            75
+          ],
+          "rank_x": 11,
+          "rank_y": 2
+        },
+        {
+          "raw": "952,234",
+          "raw_len": 7,
+          "strict": [
+            952,
+            234
+          ],
+          "loose": [
+            952,
+            234
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 215.0,
+          "d_loose": 215.0,
+          "d_center": 250.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P12",
+          "elapsed": 21.2,
+          "truth": [
+            737,
+            232
+          ],
+          "rank_x": 12,
+          "rank_y": 6
+        }
+      ]
+    }
+  ],
+  "run_id": "dense12_20261005_151712",
+  "saved_at": "2026-10-05 15:17:12"
+}

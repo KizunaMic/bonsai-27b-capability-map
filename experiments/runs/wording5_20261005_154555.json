@@ -1,0 +1,674 @@
+{
+  "group": "wording",
+  "w": 1024,
+  "h": 683,
+  "hit_radius": 40,
+  "n_wordings": 5,
+  "n_points": 4,
+  "summary": [
+    {
+      "wording": "plain",
+      "hit": 1,
+      "n": 4,
+      "median_px": 96.1,
+      "avg_s": 25.325
+    },
+    {
+      "wording": "verbose",
+      "hit": 0,
+      "n": 4,
+      "median_px": 160.0,
+      "avg_s": 22.95
+    },
+    {
+      "wording": "terse",
+      "hit": 0,
+      "n": 4,
+      "median_px": 160.0,
+      "avg_s": 11.025
+    },
+    {
+      "wording": "format_emph",
+      "hit": 0,
+      "n": 4,
+      "median_px": 160.0,
+      "avg_s": 23.400000000000002
+    },
+    {
+      "wording": "chinese",
+      "hit": 0,
+      "n": 4,
+      "median_px": 160.0,
+      "avg_s": 23.375
+    }
+  ],
+  "results": [
+    {
+      "label": "wording",
+      "results": [
+        {
+          "raw": "137,187",
+          "raw_len": 7,
+          "strict": [
+            137,
+            187
+          ],
+          "loose": [
+            137,
+            187
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 58.1,
+          "d_loose": 58.1,
+          "d_center": 434.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q1",
+          "wording": "plain",
+          "truth": [
+            133,
+            129
+          ],
+          "elapsed": 33.9
+        },
+        {
+          "raw": "300,515",
+          "raw_len": 7,
+          "strict": [
+            300,
+            515
+          ],
+          "loose": [
+            300,
+            515
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 160.0,
+          "d_loose": 160.0,
+          "d_center": 216.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q2",
+          "wording": "plain",
+          "truth": [
+            296,
+            355
+          ],
+          "elapsed": 22.3
+        },
+        {
+          "raw": "597,307",
+          "raw_len": 7,
+          "strict": [
+            597,
+            307
+          ],
+          "loose": [
+            597,
+            307
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 96.1,
+          "d_loose": 96.1,
+          "d_center": 153.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q3",
+          "wording": "plain",
+          "truth": [
+            593,
+            211
+          ],
+          "elapsed": 22.5
+        },
+        {
+          "raw": "820,515",
+          "raw_len": 7,
+          "strict": [
+            820,
+            515
+          ],
+          "loose": [
+            820,
+            515
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 13.5,
+          "d_loose": 13.5,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q4",
+          "wording": "plain",
+          "truth": [
+            829,
+            505
+          ],
+          "elapsed": 22.6
+        },
+        {
+          "raw": "137,187",
+          "raw_len": 7,
+          "strict": [
+            137,
+            187
+          ],
+          "loose": [
+            137,
+            187
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 58.1,
+          "d_loose": 58.1,
+          "d_center": 434.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q1",
+          "wording": "verbose",
+          "truth": [
+            133,
+            129
+          ],
+          "elapsed": 22.9
+        },
+        {
+          "raw": "300,515",
+          "raw_len": 7,
+          "strict": [
+            300,
+            515
+          ],
+          "loose": [
+            300,
+            515
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 160.0,
+          "d_loose": 160.0,
+          "d_center": 216.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q2",
+          "wording": "verbose",
+          "truth": [
+            296,
+            355
+          ],
+          "elapsed": 23.3
+        },
+        {
+          "raw": "597,307",
+          "raw_len": 7,
+          "strict": [
+            597,
+            307
+          ],
+          "loose": [
+            597,
+            307
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 96.1,
+          "d_loose": 96.1,
+          "d_center": 153.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q3",
+          "wording": "verbose",
+          "truth": [
+            593,
+            211
+          ],
+          "elapsed": 22.3
+        },
+        {
+          "raw": "812,735",
+          "raw_len": 7,
+          "strict": [
+            812,
+            683
+          ],
+          "loose": [
+            812,
+            735
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 178.8,
+          "d_loose": 230.6,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q4",
+          "wording": "verbose",
+          "truth": [
+            829,
+            505
+          ],
+          "elapsed": 23.3
+        },
+        {
+          "raw": "137,187",
+          "raw_len": 7,
+          "strict": [
+            137,
+            187
+          ],
+          "loose": [
+            137,
+            187
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 58.1,
+          "d_loose": 58.1,
+          "d_center": 434.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q1",
+          "wording": "terse",
+          "truth": [
+            133,
+            129
+          ],
+          "elapsed": 8.1
+        },
+        {
+          "raw": "300,515",
+          "raw_len": 7,
+          "strict": [
+            300,
+            515
+          ],
+          "loose": [
+            300,
+            515
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 160.0,
+          "d_loose": 160.0,
+          "d_center": 216.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q2",
+          "wording": "terse",
+          "truth": [
+            296,
+            355
+          ],
+          "elapsed": 7.8
+        },
+        {
+          "raw": "597,307",
+          "raw_len": 7,
+          "strict": [
+            597,
+            307
+          ],
+          "loose": [
+            597,
+            307
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 96.1,
+          "d_loose": 96.1,
+          "d_center": 153.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q3",
+          "wording": "terse",
+          "truth": [
+            593,
+            211
+          ],
+          "elapsed": 8.1
+        },
+        {
+          "raw": "812,735",
+          "raw_len": 7,
+          "strict": [
+            812,
+            683
+          ],
+          "loose": [
+            812,
+            735
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 178.8,
+          "d_loose": 230.6,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q4",
+          "wording": "terse",
+          "truth": [
+            829,
+            505
+          ],
+          "elapsed": 20.1
+        },
+        {
+          "raw": "137,187",
+          "raw_len": 7,
+          "strict": [
+            137,
+            187
+          ],
+          "loose": [
+            137,
+            187
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 58.1,
+          "d_loose": 58.1,
+          "d_center": 434.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q1",
+          "wording": "format_emph",
+          "truth": [
+            133,
+            129
+          ],
+          "elapsed": 23.6
+        },
+        {
+          "raw": "300,515",
+          "raw_len": 7,
+          "strict": [
+            300,
+            515
+          ],
+          "loose": [
+            300,
+            515
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 160.0,
+          "d_loose": 160.0,
+          "d_center": 216.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q2",
+          "wording": "format_emph",
+          "truth": [
+            296,
+            355
+          ],
+          "elapsed": 22.8
+        },
+        {
+          "raw": "597,307",
+          "raw_len": 7,
+          "strict": [
+            597,
+            307
+          ],
+          "loose": [
+            597,
+            307
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 96.1,
+          "d_loose": 96.1,
+          "d_center": 153.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q3",
+          "wording": "format_emph",
+          "truth": [
+            593,
+            211
+          ],
+          "elapsed": 23.6
+        },
+        {
+          "raw": "812,735",
+          "raw_len": 7,
+          "strict": [
+            812,
+            683
+          ],
+          "loose": [
+            812,
+            735
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 178.8,
+          "d_loose": 230.6,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q4",
+          "wording": "format_emph",
+          "truth": [
+            829,
+            505
+          ],
+          "elapsed": 23.6
+        },
+        {
+          "raw": "137,187",
+          "raw_len": 7,
+          "strict": [
+            137,
+            187
+          ],
+          "loose": [
+            137,
+            187
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 58.1,
+          "d_loose": 58.1,
+          "d_center": 434.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q1",
+          "wording": "chinese",
+          "truth": [
+            133,
+            129
+          ],
+          "elapsed": 23.7
+        },
+        {
+          "raw": "300,515",
+          "raw_len": 7,
+          "strict": [
+            300,
+            515
+          ],
+          "loose": [
+            300,
+            515
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 160.0,
+          "d_loose": 160.0,
+          "d_center": 216.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q2",
+          "wording": "chinese",
+          "truth": [
+            296,
+            355
+          ],
+          "elapsed": 23.8
+        },
+        {
+          "raw": "597,307",
+          "raw_len": 7,
+          "strict": [
+            597,
+            307
+          ],
+          "loose": [
+            597,
+            307
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 96.1,
+          "d_loose": 96.1,
+          "d_center": 153.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q3",
+          "wording": "chinese",
+          "truth": [
+            593,
+            211
+          ],
+          "elapsed": 23.6
+        },
+        {
+          "raw": "812,735",
+          "raw_len": 7,
+          "strict": [
+            812,
+            683
+          ],
+          "loose": [
+            812,
+            735
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 178.8,
+          "d_loose": 230.6,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "Q4",
+          "wording": "chinese",
+          "truth": [
+            829,
+            505
+          ],
+          "elapsed": 22.4
+        }
+      ]
+    }
+  ],
+  "run_id": "wording5_20261005_154555",
+  "saved_at": "2026-10-05 15:45:55"
+}

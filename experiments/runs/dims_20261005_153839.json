@@ -1,0 +1,41 @@
+{
+  "group": "dimensions",
+  "w": 1024,
+  "h": 683,
+  "n_passed": 4,
+  "n_dims": 4,
+  "dims": [
+    {
+      "dim": "内容理解",
+      "ask": "说出图里有什么",
+      "passed": true,
+      "detail": "- Red circle (top-left)\n- Blue circle (top-right)\n- Red circle (bottom-left)\n- Blue circle (bottom-right)",
+      "elapsed": 8.5
+    },
+    {
+      "dim": "左半区计数",
+      "ask": "左半有几个（答案 2）",
+      "passed": true,
+      "detail": "2",
+      "elapsed": 23.2
+    },
+    {
+      "dim": "颜色计数",
+      "ask": "几种颜色（答案 2）",
+      "passed": true,
+      "detail": "2\n\n[护栏：经 2 次纠正重试仍未通过 FIXED_POINT 判据，以上为最后一次输出。]",
+      "elapsed": 24.9
+    },
+    {
+      "dim": "圆点计数",
+      "ask": "几个圆点（答案 4）",
+      "passed": true,
+      "detail": "4",
+      "elapsed": 22.5
+    }
+  ],
+  "dissociation": true,
+  "note": "维度 2/3/4 不要求输出坐标，排除格式干扰",
+  "run_id": "dims_20261005_153839",
+  "saved_at": "2026-10-05 15:38:39"
+}

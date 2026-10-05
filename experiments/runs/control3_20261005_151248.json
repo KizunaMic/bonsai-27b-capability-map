@@ -1,0 +1,401 @@
+{
+  "group": "control",
+  "w": 1024,
+  "h": 683,
+  "hit_radius": 40,
+  "A_no_hint": {
+    "n": 3,
+    "hit_true": 0,
+    "hit_hint": 0,
+    "d_true": 307.3333333333333,
+    "d_hint": 307.3333333333333
+  },
+  "B_correct_hint": {
+    "n": 3,
+    "hit_true": 3,
+    "hit_hint": 3,
+    "d_true": 0.4666666666666666,
+    "d_hint": 0.4666666666666666
+  },
+  "C_wrong_hint": {
+    "n": 3,
+    "hit_true": 0,
+    "hit_hint": 3,
+    "d_true": 273.06666666666666,
+    "d_hint": 1.0
+  },
+  "results": [
+    {
+      "group": "ctrlA",
+      "case": "control_ctrlA",
+      "w": 1024,
+      "h": 683,
+      "results": [
+        {
+          "raw": "432,403",
+          "raw_len": 7,
+          "strict": [
+            432,
+            403
+          ],
+          "loose": [
+            432,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 449.0,
+          "d_loose": 449.0,
+          "d_center": 473.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T1",
+          "truth": [
+            112,
+            88
+          ],
+          "elapsed": 22.9,
+          "asked_pct": [
+            0.11,
+            0.13
+          ],
+          "hint_px": [
+            112,
+            88
+          ],
+          "d_hint": 449.0
+        },
+        {
+          "raw": "432,403\n\n[护栏：经 2 次纠正重试仍未通过 FIXED_POINT 判据，以上为最后一次输出。]",
+          "raw_len": 53,
+          "strict": null,
+          "loose": [
+            432,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": null,
+          "d_loose": 123.3,
+          "d_center": 94.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T2",
+          "truth": [
+            440,
+            280
+          ],
+          "elapsed": 21.9,
+          "asked_pct": [
+            0.43,
+            0.41
+          ],
+          "hint_px": [
+            440,
+            280
+          ],
+          "d_hint": 123.3
+        },
+        {
+          "raw": "432,403",
+          "raw_len": 7,
+          "strict": [
+            432,
+            403
+          ],
+          "loose": [
+            432,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 349.7,
+          "d_loose": 349.7,
+          "d_center": 250.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T3",
+          "truth": [
+            737,
+            232
+          ],
+          "elapsed": 17.6,
+          "asked_pct": [
+            0.72,
+            0.34
+          ],
+          "hint_px": [
+            737,
+            232
+          ],
+          "d_hint": 349.7
+        }
+      ]
+    },
+    {
+      "group": "ctrlB",
+      "case": "control_ctrlB",
+      "w": 1024,
+      "h": 683,
+      "results": [
+        {
+          "raw": "113,89",
+          "raw_len": 6,
+          "strict": [
+            113,
+            89
+          ],
+          "loose": [
+            113,
+            89
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.4,
+          "d_loose": 1.4,
+          "d_center": 473.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T1",
+          "truth": [
+            112,
+            88
+          ],
+          "elapsed": 20.1,
+          "asked_pct": [
+            0.11,
+            0.13
+          ],
+          "hint_px": [
+            112,
+            88
+          ],
+          "d_hint": 1.4
+        },
+        {
+          "raw": "440,280",
+          "raw_len": 7,
+          "strict": [
+            440,
+            280
+          ],
+          "loose": [
+            440,
+            280
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 94.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T2",
+          "truth": [
+            440,
+            280
+          ],
+          "elapsed": 20.0,
+          "asked_pct": [
+            0.43,
+            0.41
+          ],
+          "hint_px": [
+            440,
+            280
+          ],
+          "d_hint": 0.0
+        },
+        {
+          "raw": "737,232",
+          "raw_len": 7,
+          "strict": [
+            737,
+            232
+          ],
+          "loose": [
+            737,
+            232
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 250.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T3",
+          "truth": [
+            737,
+            232
+          ],
+          "elapsed": 20.0,
+          "asked_pct": [
+            0.72,
+            0.34
+          ],
+          "hint_px": [
+            737,
+            232
+          ],
+          "d_hint": 0.0
+        }
+      ]
+    },
+    {
+      "group": "ctrlC",
+      "case": "control_ctrlC",
+      "w": 1024,
+      "h": 683,
+      "results": [
+        {
+          "raw": "512,342",
+          "raw_len": 7,
+          "strict": [
+            512,
+            342
+          ],
+          "loose": [
+            512,
+            342
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 473.8,
+          "d_loose": 473.8,
+          "d_center": 473.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T1",
+          "truth": [
+            112,
+            88
+          ],
+          "elapsed": 20.0,
+          "asked_pct": [
+            0.5,
+            0.5
+          ],
+          "hint_px": [
+            512,
+            341
+          ],
+          "d_hint": 1.0
+        },
+        {
+          "raw": "512,342\n\n[护栏：经 2 次纠正重试仍未通过 FIXED_POINT 判据，以上为最后一次输出。]",
+          "raw_len": 53,
+          "strict": null,
+          "loose": [
+            512,
+            342
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": null,
+          "d_loose": 95.0,
+          "d_center": 94.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T2",
+          "truth": [
+            440,
+            280
+          ],
+          "elapsed": 22.5,
+          "asked_pct": [
+            0.5,
+            0.5
+          ],
+          "hint_px": [
+            512,
+            341
+          ],
+          "d_hint": 1.0
+        },
+        {
+          "raw": "512,342",
+          "raw_len": 7,
+          "strict": [
+            512,
+            342
+          ],
+          "loose": [
+            512,
+            342
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 250.4,
+          "d_loose": 250.4,
+          "d_center": 250.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "T3",
+          "truth": [
+            737,
+            232
+          ],
+          "elapsed": 18.9,
+          "asked_pct": [
+            0.5,
+            0.5
+          ],
+          "hint_px": [
+            512,
+            341
+          ],
+          "d_hint": 1.0
+        }
+      ]
+    }
+  ],
+  "note": "C 组给 50%,50% 但真值不在那；若 C 命中提示位置则证明模型未使用视觉信息",
+  "run_id": "control3_20261005_151248",
+  "saved_at": "2026-10-05 15:12:48"
+}

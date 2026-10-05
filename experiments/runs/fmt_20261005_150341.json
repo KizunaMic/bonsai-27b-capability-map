@@ -1,0 +1,161 @@
+{
+  "group": "fmt",
+  "think": false,
+  "model": "Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+  "hit_radius": 40,
+  "results": [
+    {
+      "group": "fmt",
+      "case": "fmt_audit_1024x683",
+      "w": 1024,
+      "h": 683,
+      "think": false,
+      "hit_radius": 40,
+      "results": [
+        {
+          "raw": "153,197",
+          "raw_len": 7,
+          "strict": [
+            153,
+            197
+          ],
+          "loose": [
+            153,
+            197
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 61.0,
+          "d_loose": 61.0,
+          "d_center": 413.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "A",
+          "elapsed": 31.0,
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "truth": [
+            153,
+            136
+          ]
+        },
+        {
+          "raw": "803,773",
+          "raw_len": 7,
+          "strict": [
+            803,
+            683
+          ],
+          "loose": [
+            803,
+            773
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 151.8,
+          "d_loose": 241.5,
+          "d_center": 361.6,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "B",
+          "elapsed": 5.4,
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "truth": [
+            819,
+            532
+          ]
+        },
+        {
+          "raw": "803,197",
+          "raw_len": 7,
+          "strict": [
+            803,
+            197
+          ],
+          "loose": [
+            803,
+            197
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 45.0,
+          "d_loose": 45.0,
+          "d_center": 369.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "C",
+          "elapsed": 5.6,
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "truth": [
+            839,
+            170
+          ]
+        },
+        {
+          "raw": "153,557",
+          "raw_len": 7,
+          "strict": [
+            153,
+            557
+          ],
+          "loose": [
+            153,
+            557
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": false,
+          "loose_hit": false,
+          "center_hit": false,
+          "d_strict": 52.2,
+          "d_loose": 52.2,
+          "d_center": 370.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "D",
+          "elapsed": 5.9,
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "truth": [
+            204,
+            546
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "温度锁 0；思考由引擎侧 budget 控制，未做客户端截断",
+  "run_id": "fmt_20261005_150341",
+  "saved_at": "2026-10-05 15:04:32"
+}

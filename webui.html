@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KVMem · Bonsai 27B 本地聊天</title>
+<style>
+  :root { --bg:#f5f7fa; --panel:#ffffff; --line:#e3e8ef; --txt:#1f2937; --sub:#6b7280;
+          --acc:#2563eb; --acc2:#10b981; --warn:#ef4444; --bub:#eef2ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+         background:var(--bg); color:var(--txt); height:100vh; display:flex; flex-direction:column; }
+  header { padding:12px 18px; background:var(--panel); border-bottom:1px solid var(--line);
+           display:flex; align-items:center; gap:12px; }
+  header h1 { font-size:16px; margin:0; }
+  #status { font-size:12px; color:var(--sub); display:flex; align-items:center; gap:6px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:var(--warn); }
+  .dot.ok { background:var(--acc2); }
+  .spacer { flex:1; }
+  button { font:inherit; cursor:pointer; border:1px solid var(--line); background:#fff;
+           color:var(--txt); padding:7px 13px; border-radius:8px; }
+  button.primary { background:var(--acc); border-color:var(--acc); color:#fff; }
+  button.toggle.on { background:var(--acc2); border-color:var(--acc2); color:#fff; }
+  main { flex:1; display:flex; min-height:0; }
+  #chat { flex:1; display:flex; flex-direction:column; min-width:0; }
+  #messages { flex:1; overflow-y:auto; padding:18px; }
+  .msg { max-width:78%; padding:10px 13px; border-radius:12px; margin-bottom:12px; line-height:1.6; white-space:pre-wrap; word-wrap:break-word; }
+  .msg.user { background:var(--acc); color:#fff; margin-left:auto; border-bottom-right-radius:4px; }
+  .msg.bot { background:var(--bub); border-bottom-left-radius:4px; }
+  .msg.bot .meta { font-size:11px; color:var(--sub); margin-top:6px; }
+  #inputbar { border-top:1px solid var(--line); padding:12px; background:var(--panel);
+              display:flex; gap:10px; align-items:flex-end; }
+  #input { flex:1; resize:none; height:54px; padding:10px; border:1px solid var(--line);
+           border-radius:8px; font:inherit; }
+  /* 监测侧栏 */
+  #monitor { width:340px; border-left:1px solid var(--line); background:var(--panel);
+             display:none; flex-direction:column; }
+  #monitor.show { display:flex; }
+  #monitor h2 { font-size:13px; margin:0; padding:12px 14px; border-bottom:1px solid var(--line);
+                display:flex; justify-content:space-between; align-items:center; }
+  #monbody { flex:1; overflow-y:auto; padding:12px 14px; }
+  .kv { display:flex; justify-content:space-between; gap:10px; font-size:12px; padding:5px 0;
+        border-bottom:1px dashed var(--line); }
+  .kv span:first-child { color:var(--sub); }
+  .kv span:last-child { font-weight:600; text-align:right; }
+  #log { margin-top:10px; background:#0f172a; color:#cbd5e1; font-family:ui-monospace,Consolas,monospace;
+         font-size:11px; line-height:1.5; padding:10px; border-radius:8px; height:240px; overflow-y:auto;
+         white-space:pre-wrap; word-break:break-all; }
+  .hint { font-size:11px; color:var(--sub); padding:4px 14px 10px; }
+  #monbody h3 { font-size:12px; margin:14px 0 6px; color:var(--acc); }
+</style>
+</head>
+<body>
+<header>
+  <h1>KVMem · Bonsai 27B 本地聊天</h1>
+  <div id="status"><span class="dot" id="dot"></span><span id="statustxt">未连接</span></div>
+  <div class="spacer"></div>
+  <button id="monBtn" class="toggle">数据监测：关</button>
+</header>
+
+<main>
+  <section id="chat">
+    <div id="messages"></div>
+    <div id="inputbar">
+      <textarea id="input" placeholder="输入消息，Enter 发送，Shift+Enter 换行…"></textarea>
+      <button id="send" class="primary">发送</button>
+    </div>
+  </section>
+
+  <aside id="monitor">
+    <h2>数据监测 <span id="monstate" style="color:var(--sub);font-weight:normal">未启用</span></h2>
+    <div id="monbody">
+      <div id="props"></div>
+      <h3>KVMem 追踪日志（server.log 末尾）</h3>
+      <div id="log">（开启监测后自动刷新）</div>
+      <div class="hint">监测面板显示引擎实时配置与 KVMem 调度日志。深层 trace 由服务启动时 <code>--kvmem-trace</code> 开启，这里只读取其输出。</div>
+    </div>
+  </aside>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+let streaming = false, monTimer = null;
+
+/* ---- 连接状态 ---- */
+async function checkStatus(){
+  try {
+    const r = await fetch('/api/props', {cache:'no-store'});
+    if (r.ok){ $('#dot').classList.add('ok'); $('#statustxt').textContent='已连接'; return; }
+    throw 0;
+  } catch(e){ $('#dot').classList.remove('ok'); $('#statustxt').textContent='未连接（模型服务未启动？）'; }
+}
+
+/* ---- 聊天 ---- */
+function addMsg(role, text){
+  const d = document.createElement('div');
+  d.className = 'msg ' + (role==='user'?'user':'bot');
+  d.textContent = text;
+  $('#messages').appendChild(d);
+  $('#messages').scrollTop = $('#messages').scrollHeight;
+  return d;
+}
+async function send(){
+  if (streaming) return;
+  const inp = $('#input'); const text = inp.value.trim();
+  if (!text) return;
+  inp.value = '';
+  addMsg('user', text);
+  const botEl = addMsg('bot', '▍');
+  streaming = true; $('#send').disabled = true;
+  try {
+    const r = await fetch('/api/chat', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ messages:[{role:'user',content:text}], max_tokens:512, temperature:0.7 })
+    });
+    const reader = r.body.getReader(); const dec = new TextDecoder();
+    let buf='', full='', first=true;
+    while(true){
+      const {done,value} = await reader.read(); if(done) break;
+      buf += dec.decode(value,{stream:true});
+      const lines = buf.split('\n'); buf = lines.pop();
+      for(const line of lines){
+        if(!line.startsWith('data:')) continue;
+        const data = line.slice(5).trim();
+        if(data==='[DONE]') continue;
+        try{
+          const j = JSON.parse(data);
+          const c = j.choices?.[0]?.delta?.content || '';
+          if(c){ full+=c; botEl.textContent = full + '▍'; $('#messages').scrollTop=$('#messages').scrollHeight; }
+        }catch(e){}
+      }
+    }
+    botEl.textContent = full || '（无回复）';
+  } catch(e){
+    botEl.textContent = '请求失败：' + e.message;
+  } finally {
+    streaming = false; $('#send').disabled = false;
+    const m = botEl.querySelector ? null : null;
+  }
+}
+$('#send').onclick = send;
+$('#input').addEventListener('keydown', e=>{
+  if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); send(); }
+});
+
+/* ---- 数据监测 开关 ---- */
+function fmtProps(p){
+  if(!p || p.error) return '<div class="kv"><span>状态</span><span>'+(p&&p.error?p.error:'无数据')+'</span></div>';
+  const rows = [
+    ['模型', p.model || '-'],
+    ['构建', (p.build_info||'-')],
+    ['上下文 n_ctx', p.n_ctx ?? '-'],
+    ['KV 类型', p.kv_type ?? '-'],
+    ['KVMem 启用', p.kvmem ? '是 (method='+(p.kvmem_method||'-')+')' : '否'],
+    ['KV 内存池', p.kvmem_cpu_bytes ? (p.kvmem_cpu_bytes/1073741824).toFixed(2)+' GiB' : '-'],
+    ['KV budget', p.kvmem_budget ?? '-'],
+    ['sink tokens', p.kvmem_sink_tokens ?? '-'],
+    ['推测解码', p.spec ? p.spec : 'off'],
+  ];
+  return rows.map(r=>'<div class="kv"><span>'+r[0]+'</span><span>'+r[1]+'</span></div>').join('');
+}
+async function refreshMonitor(){
+  try{
+    const r = await fetch('/api/props',{cache:'no-store'}); const p = await r.json();
+    $('#props').innerHTML = fmtProps(p);
+  }catch(e){}
+  try{
+    const r = await fetch('/api/log?n=60',{cache:'no-store'}); const j = await r.json();
+    const el=$('#log'); el.textContent = j.log || '（无日志）';
+    el.scrollTop = el.scrollHeight;
+  }catch(e){}
+}
+$('#monBtn').onclick = ()=>{
+  const on = $('#monitor').classList.toggle('show');
+  $('#monBtn').classList.toggle('on', on);
+  $('#monBtn').textContent = '数据监测：' + (on?'开':'关');
+  $('#monstate').textContent = on ? '运行中' : '未启用';
+  if(on){ refreshMonitor(); monTimer = setInterval(refreshMonitor, 2500); }
+  else { clearInterval(monTimer); monTimer=null; }
+};
+
+checkStatus(); setInterval(checkStatus, 5000);
+</script>
+</body>
+</html>

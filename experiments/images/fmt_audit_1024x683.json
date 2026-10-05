@@ -1,0 +1,30 @@
+{
+  "name": "fmt_audit_1024x683",
+  "width": 1024,
+  "height": 683,
+  "truth": {
+    "A": {
+      "x": 153,
+      "y": 136
+    },
+    "B": {
+      "x": 819,
+      "y": 532
+    },
+    "C": {
+      "x": 839,
+      "y": 170
+    },
+    "D": {
+      "x": 204,
+      "y": 546
+    }
+  },
+  "quadrants": {
+    "A": "left_top",
+    "B": "right_bottom",
+    "C": "right_top",
+    "D": "left_bottom"
+  },
+  "note": "图上无文字标注，位置线索为零"
+}

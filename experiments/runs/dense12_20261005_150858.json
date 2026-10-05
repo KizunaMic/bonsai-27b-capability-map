@@ -1,0 +1,410 @@
+{
+  "group": "density",
+  "w": 1024,
+  "h": 683,
+  "hit_radius": 40,
+  "n_targets": 12,
+  "unique_x": 12,
+  "unique_y": 12,
+  "n_valid": 12,
+  "strict_hit": 12,
+  "loose_hit": 12,
+  "format_loss": 0,
+  "verdict": [
+    "✓ 网格猜测假说不成立：X 有 12/12 个不同值，输出是分散的",
+    "✓ 宽松命中 100%，能力部分可用"
+  ],
+  "results": [
+    {
+      "label": "dense",
+      "results": [
+        {
+          "raw": "113,89",
+          "raw_len": 6,
+          "strict": [
+            113,
+            89
+          ],
+          "loose": [
+            113,
+            89
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.4,
+          "d_loose": 1.4,
+          "d_center": 473.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P1",
+          "elapsed": 21.4,
+          "truth": [
+            112,
+            88
+          ],
+          "asked_fx": 0.11,
+          "asked_fy": 0.13
+        },
+        {
+          "raw": "174,197",
+          "raw_len": 7,
+          "strict": [
+            174,
+            197
+          ],
+          "loose": [
+            174,
+            197
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.0,
+          "d_loose": 1.0,
+          "d_center": 367.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P2",
+          "elapsed": 6.5,
+          "truth": [
+            174,
+            198
+          ],
+          "asked_fx": 0.17,
+          "asked_fy": 0.29
+        },
+        {
+          "raw": "133,321",
+          "raw_len": 7,
+          "strict": [
+            133,
+            321
+          ],
+          "loose": [
+            133,
+            321
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 379.5,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P3",
+          "elapsed": 16.8,
+          "truth": [
+            133,
+            321
+          ],
+          "asked_fx": 0.13,
+          "asked_fy": 0.47
+        },
+        {
+          "raw": "194,450",
+          "raw_len": 7,
+          "strict": [
+            194,
+            450
+          ],
+          "loose": [
+            194,
+            450
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 336.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P4",
+          "elapsed": 16.7,
+          "truth": [
+            194,
+            450
+          ],
+          "asked_fx": 0.19,
+          "asked_fy": 0.66
+        },
+        {
+          "raw": "235,567",
+          "raw_len": 7,
+          "strict": [
+            235,
+            567
+          ],
+          "loose": [
+            235,
+            567
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.0,
+          "d_loose": 1.0,
+          "d_center": 356.9,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P5",
+          "elapsed": 16.7,
+          "truth": [
+            235,
+            566
+          ],
+          "asked_fx": 0.23,
+          "asked_fy": 0.83
+        },
+        {
+          "raw": "348,55",
+          "raw_len": 6,
+          "strict": [
+            348,
+            55
+          ],
+          "loose": [
+            348,
+            55
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.0,
+          "d_loose": 1.0,
+          "d_center": 330.6,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P6",
+          "elapsed": 16.6,
+          "truth": [
+            348,
+            54
+          ],
+          "asked_fx": 0.34,
+          "asked_fy": 0.08
+        },
+        {
+          "raw": "379,150",
+          "raw_len": 7,
+          "strict": [
+            379,
+            150
+          ],
+          "loose": [
+            379,
+            150
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.0,
+          "d_loose": 1.0,
+          "d_center": 233.3,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P7",
+          "elapsed": 17.1,
+          "truth": [
+            378,
+            150
+          ],
+          "asked_fx": 0.37,
+          "asked_fy": 0.22
+        },
+        {
+          "raw": "440,280",
+          "raw_len": 7,
+          "strict": [
+            440,
+            280
+          ],
+          "loose": [
+            440,
+            280
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 94.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P8",
+          "elapsed": 16.9,
+          "truth": [
+            440,
+            280
+          ],
+          "asked_fx": 0.43,
+          "asked_fy": 0.41
+        },
+        {
+          "raw": "481,403",
+          "raw_len": 7,
+          "strict": [
+            481,
+            403
+          ],
+          "loose": [
+            481,
+            403
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.0,
+          "d_loose": 1.0,
+          "d_center": 68.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P9",
+          "elapsed": 16.9,
+          "truth": [
+            481,
+            402
+          ],
+          "asked_fx": 0.47,
+          "asked_fy": 0.59
+        },
+        {
+          "raw": "420,526",
+          "raw_len": 7,
+          "strict": [
+            420,
+            526
+          ],
+          "loose": [
+            420,
+            526
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 1.4,
+          "d_loose": 1.4,
+          "d_center": 206.2,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P10",
+          "elapsed": 16.9,
+          "truth": [
+            419,
+            525
+          ],
+          "asked_fx": 0.41,
+          "asked_fy": 0.77
+        },
+        {
+          "raw": "696,75",
+          "raw_len": 6,
+          "strict": [
+            696,
+            75
+          ],
+          "loose": [
+            696,
+            75
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 323.4,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P11",
+          "elapsed": 16.9,
+          "truth": [
+            696,
+            75
+          ],
+          "asked_fx": 0.68,
+          "asked_fy": 0.11
+        },
+        {
+          "raw": "737,232",
+          "raw_len": 7,
+          "strict": [
+            737,
+            232
+          ],
+          "loose": [
+            737,
+            232
+          ],
+          "center": [
+            512,
+            341
+          ],
+          "strict_hit": true,
+          "loose_hit": true,
+          "center_hit": false,
+          "d_strict": 0.0,
+          "d_loose": 0.0,
+          "d_center": 250.0,
+          "format_loss": false,
+          "has_explanation": true,
+          "label": "P12",
+          "elapsed": 17.0,
+          "truth": [
+            737,
+            232
+          ],
+          "asked_fx": 0.72,
+          "asked_fy": 0.34
+        }
+      ]
+    }
+  ],
+  "run_id": "dense12_20261005_150858",
+  "saved_at": "2026-10-05 15:08:58"
+}
